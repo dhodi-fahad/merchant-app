@@ -22,7 +22,7 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
     });
 
     return (
-        <div className="sm:ml-64 w-screen h-screen bg-yellow-100 overflow-y-scroll">
+        <div className="sm:ml-64 w-screen h-screen bg-purple-50 overflow-y-scroll">
             {/* Render the Navbar component */}
             {navbar}
 
