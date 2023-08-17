@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 
 interface ButtonProps {
-    title:string
+    title: string;
+    icon?: ReactNode;
 }
 const Button: React.FC<ButtonProps> = (props) => {
-    const {title} = props
+    const {title, icon} = props
     return (
-        <button type="button" className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-2 focus:ring-purple-300 font-normal rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+        <button type="button" className="flex items-center w-fit  text-white border border-gray-600 bg-gray-600 focus:text-white focus:bg-gray-800 hover:text-white hover:bg-gray-800 focus:ring-2 focus:ring-gray-300 font-normal rounded-lg text-sm px-2.5 py-2.5 mr-2 mb-2">
+            {icon?<span className="px-1">{icon}</span>:null}
             {title}
         </button>
     )

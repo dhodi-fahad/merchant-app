@@ -11,7 +11,7 @@ const SelectInput: React.FC<SelectInputProps> = (props) => {
             <label htmlFor="default" className="block mb-2 text-sm font-normal text-black">{label}</label>
             <select id="default"
                     className="bg-gray-50 border border-gray-600 text-black text-sm
-                               rounded-lg focus:ring-blue-400 focus:border-blue-400 block  p-2.5
+                               rounded-lg focus:ring-gray-400 focus:border-gray-400 block  p-2.5
                                placeholder-gray-400 ">
                     <option selected>Choose a country</option>
                     <option value="US">United States</option>
