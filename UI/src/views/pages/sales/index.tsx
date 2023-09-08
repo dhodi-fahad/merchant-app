@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sales: React.FC = () => {
     return(
-        <div>
+        <div className="px-5 py-20">
             Sales
         </div>
     )

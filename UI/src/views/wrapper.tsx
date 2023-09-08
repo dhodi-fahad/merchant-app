@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import Navbar from "../components/navbar/navbar.tsx";
-import Pages from "./pages";
 
 // Props for the Wrapper component
 interface WrapperProps {
@@ -15,7 +14,7 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
         if (React.isValidElement(child)) {
             if (child.type === Navbar) {
                 navbar = child;
-            } else if (child.type === Pages) {
+            } else{
                 pages = child;
             }
         }

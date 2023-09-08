@@ -24,10 +24,10 @@ export const TableHead: React.FC = () => {
 interface HeadCellProps {
     title: string;
 }
-const HeadCell: React.FC<HeadCellProps> = (props) => {
+export const HeadCell: React.FC<HeadCellProps> = (props) => {
     const {title} = props
     return (
-        <th scope="col" className="px-4 py-3">{title}</th>
+        <th scope="col" className="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-black dark:text-gray-400">{title}</th>
     )
 }
 

@@ -1,17 +1,24 @@
-import React from 'react';
+import React, {ChangeEvent} from 'react';
 
 interface InputFieldProps {
     label:string
-
+    type: string
+    name: string
+    value: string | number
+    onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 const InputField: React.FC<InputFieldProps> = (props) => {
-    const {label} = props
+    const {label, type, name, value, onChange} = props
     return(
-        <div className="mb-6 items-start">
+        <div className="w-auto mb-6 items-start">
             <label htmlFor="default-input" className="block mb-6 text-sm font-normal text-black">{label}</label>
-            <input type="text" id="default-input"  className="bg-gray-50 border border-gray-600 text-black text-sm
-            rounded-lg focus:ring-gray-400 focus:border-gray-400 block  p-2.5
-            placeholder-gray-400 " placeholder={label}/>
+            <input type={type} id="default-input"  className="bg-gray-50 border border-gray-200 text-black text-sm
+            rounded-lg block  p-2.5 focus:outline-none
+            placeholder-gray-400 "
+                   placeholder={label}
+                   name={name}
+                   value={value}
+                   onChange={onChange}/>
         </div>
     )
 }
@@ -19,7 +26,7 @@ const InputField: React.FC<InputFieldProps> = (props) => {
 export default InputField
 
 export const CustomInputField: React.FC<InputFieldProps> = (props) => {
-    const {label} = props
+    const {label, name, value, onChange} = props
     return (
         <div >
             <label className="block mb-2 text-sm font-normal text-black" htmlFor="default_size">{label}</label>
@@ -30,7 +37,11 @@ export const CustomInputField: React.FC<InputFieldProps> = (props) => {
                 <input type="number"
                        id="website-admin"
                        className="bg-gray-50 outline-0 rounded-lg text-black text-sm p-2.5 placeholder-gray-400"
-                       placeholder={label}/>
+                       placeholder={label}
+                       name={name}
+                       value={value}
+                       onChange={onChange}
+                />
             </div>
         </div>
     )

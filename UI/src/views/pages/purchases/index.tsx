@@ -2,7 +2,7 @@
 
 const Purchases = () => {
     return (
-        <div>
+        <div className="px-5 py-20">
             Purchases
         </div>
     )
